@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+/* Estilos generales */
+h1 {
+    color: black;
+    text-align: left;
+    padding: 35px;
+    background-color: rgba(0, 0, 0, 0.173);
+}
+
+.container {
+    padding: 25px;
+}
+
+
+/* -------------HEADER-------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header a img {
+    width: 120px;
+}
+
+.nav-header ul {
+    display: flex;
+    list-style: none;
+    width: 800px;
+    justify-content: space-evenly;
+    margin-right: 15px;
+}
+
+.nav-header ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* --------------MAIN--------------- */
+body main {
+    margin: 0px 15px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: rgba(0, 0, 0, 0.173);
+}
+
+body {
+    background-color: rgba(19, 19, 19, 0.232);
+}
+
+
+/* ----pagina inicio--- */
+/* animación titulo */
+.animate__flash{
+    --animate-duration: 3s;
+}
+
+/* ----página estudio jurídico---- */
+.row {
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.caja-card {
+    background-color: black;
+}
+
+/* ----página negocios---- */
+
+.clearfix {
+    margin: 25px;
+}
+
+.caja-titulos {
+    background-color: beige;
+    padding: 15px;
+}
+
+/* ----página de constelaciones */
+/* galeria de talleres grupales */
+.grid-container {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: (2, 1fr);
+    grid-template-areas:
+        "imagen1 imagen2 imagen3"
+        "imagen4 imagen5 imagen6";
+    margin: 5% auto;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.337);
+}
+
+.imagen {
+    margin: 5px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.imagen:hover {
+    transform: scale(1.1);
+}
+
+.imagen1 {
+    grid-area: imagen1;
+    background-image: url(../recursos/IMG_6030.JPG);
+}
+
+.imagen2 {
+    grid-area: imagen2;
+    background-image: url(../recursos/IMG_6033.JPG);
+}
+
+.imagen3 {
+    grid-area: imagen3;
+    background-image: url(../recursos/IMG_6048.JPG);
+}
+
+.imagen4 {
+    grid-area: imagen4;
+    background-image: url(../recursos/IMG_6129.JPG);
+}
+
+.imagen5 {
+    grid-area: imagen5;
+    background-image: url(../recursos/IMG_6140.JPG);
+}
+
+.imagen6 {
+    grid-area: imagen6;
+    background-image: url(../recursos/IMG_6146.JPG);
+}
+
+/* ----pagina de contacto---- */
+
+.parrafo-contacto {
+    align-items: baseline
+}
+
+.formulario {
+    width: 500px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-contacto {
+    color: black;
+    text-decoration: none;
+}
+
+.email-contacto:hover {
+    text-decoration: underline;
+}
+
+input {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+select {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+textarea {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* --------------FOOTER-------------- */
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav-footer ul{
+    display: flex;
+    list-style: none;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.nav-footer ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.icons i {
+    font-size: 20px;
+}
+
+
+/*Mobile-last => Max-width*/
+@media (max-width: 826px) {
+    .header {
+        justify-content: center;
+    }
+}
+@media (max-width: 826px){
+    .nav-header ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: repeat (1, 1fr);
+        grid-template-rows: repeat (3, 1fr);
+        width: 400px;
+        grid-template-areas: 
+        "imagen1 imagen2"
+        "imagen3 imagen4"
+        "imagen5 imagen6"
+    }
+}
